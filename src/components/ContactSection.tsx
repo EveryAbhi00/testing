@@ -11,16 +11,11 @@ const ContactCard = ({
   icon: JSX.Element;
   title: string;
   value: string;
-  href: string;
+  href?: string;
   bgClass: string;
 }) => {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-4 bg-[#1a1a1a] hover:bg-[#2a2a2a] transition-colors px-6 py-4 rounded-xl shadow-md w-full h-20"
-    >
+  const content = (
+    <div className="flex items-center gap-4 bg-[#1a1a1a] hover:bg-[#2a2a2a] transition-colors px-6 py-4 rounded-xl shadow-md w-full h-20">
       <div className={`p-2 rounded-lg ${bgClass} text-white flex-shrink-0`}>
         {icon}
       </div>
@@ -28,7 +23,15 @@ const ContactCard = ({
         <p className="text-white font-semibold text-sm">{title}</p>
         <p className="text-gray-300 text-base">{value}</p>
       </div>
+    </div>
+  );
+
+  return href && href !== "#" ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="w-full">
+      {content}
     </a>
+  ) : (
+    <div className="w-full">{content}</div>
   );
 };
 
@@ -69,7 +72,6 @@ export default function Contact() {
           icon={<MapPin size={24} />}
           title="Location"
           value="Noida, India"
-          href="#"
           bgClass="bg-gray-700"
         />
       </div>
