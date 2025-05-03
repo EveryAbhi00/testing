@@ -39,7 +39,12 @@ const Footer = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-cyberpunk-purple transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:contact@example.com" className="text-white/70 hover:text-cyberpunk-teal transition-colors">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhimanu9616@gmail.com&su=Let's+Connect&body=Hi+Prakhar%2C%0A%0AI+saw+your+portfolio..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyberpunk-blue transition-colors duration-300"
+            >
               <Mail size={24} />
             </a>
           </div>

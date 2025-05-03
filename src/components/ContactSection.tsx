@@ -51,7 +51,7 @@ export default function Contact() {
           icon={<Mail size={24} />}
           title="Email"
           value="abhimanu9616@gmail.com"
-          href="mailto:abhimanu9616@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=abhimanu9616@gmail.com&su=Let's+Connect&body=Hi+Prakhar%2C%0A%0AI+saw+your+portfolio..."
           bgClass="bg-cyan-800"
         />
         <ContactCard
