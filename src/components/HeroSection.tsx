@@ -80,7 +80,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-b from-cyberpunk-purple/30 to-cyberpunk-blue/30 blur-xl animate-pulse-glow z-0"></div>
               <div className="absolute inset-0 rounded-full border border-white/20 backdrop-blur-sm bg-gradient-to-b from-white/10 to-white/5 overflow-hidden flex items-center justify-center z-10">
                 <img
-                  src="/1741673344964 (1).jpg"
+                  src="image/1741673344964 (1).jpg"
                   alt="Prakhar Singhal"
                   className="w-full h-full object-cover mix-blend-luminosity opacity-70 rounded-full"
                 />

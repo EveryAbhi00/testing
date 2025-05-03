@@ -4,10 +4,10 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // Replace with your actual GitHub repo name
-const repoName = "your-repo-name"; 
+const repoName = "testing"; // Replace with your repo name
 
 export default defineConfig(({ mode }) => ({
-  base: `/${testing}/`, // 👈 Required for GitHub Pages
+  base: `/${repoName}/`, // 👈 Required for GitHub Pages
 
   server: {
     host: "::",
