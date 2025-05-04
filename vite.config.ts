@@ -1,14 +1,22 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
+import { componentTagger } from 'lovable-tagger';
 
-// ✅ Add your repo name here (matches "homepage" in package.json)
-export default defineConfig({
-  base: '/testing/',
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+export default defineConfig(({ mode }) => {
+  const isProd = mode === 'production';
+
+  return {
+    base: isProd ? '/testing/' : '/',  // <-- This is critical
+    server: {
+      host: '::',
+      port: 8080,
     },
-  },
-})
+    plugins: [react(), !isProd && componentTagger()].filter(Boolean),
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
+  };
+});
