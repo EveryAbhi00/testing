@@ -15,7 +15,7 @@ const App = () => (
       {/* Optional: Keep one Toaster if they serve the same role */}
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/testing"> {/* Set the basename */}
+      <BrowserRouter basename="/"> {/* Set the basename */}
         <Routes>
           {/* ⚠️ Add new routes ABOVE the wildcard route */}
           <Route path="/" element={<Index />} />
