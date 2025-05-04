@@ -7,12 +7,7 @@ export default defineConfig(({ mode }) => {
   const isProd = mode === 'production';
 
   return {
-    base: isProd ? '/' : '/',  
-    server: {
-      host: '::',
-      port: 8080,
-    },
-    plugins: [react(), !isProd && componentTagger()].filter(Boolean),
+    plugins: [react(), componentTagger()].filter(Boolean),
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
