@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path';
+import path from 'path'
 
-// https://vite.dev/config/
+// ✅ Add your repo name here (matches "homepage" in package.json)
 export default defineConfig({
+  base: '/testing/',
   plugins: [react()],
   resolve: {
     alias: {

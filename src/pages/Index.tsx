@@ -15,7 +15,6 @@ const Index = () => {
   useEffect(() => {
     document.title = "Prakhar Singhal's Portfolio";
     
-    // Smooth scroll function to center sections
     const smoothScrollToCenter = (element: HTMLElement) => {
       const elementRect = element.getBoundingClientRect();
       const absoluteElementTop = elementRect.top + window.pageYOffset;
@@ -28,7 +27,6 @@ const Index = () => {
       });
     };
 
-    // Add click event listeners to navigation links to scroll to center
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -42,7 +40,6 @@ const Index = () => {
       });
     });
 
-    // Cleanup event listeners
     return () => {
       navLinks.forEach(link => {
         link.removeEventListener('click', () => {});
@@ -67,6 +64,5 @@ const Index = () => {
     </div>
   );
 };
-
 export default Index;
 
