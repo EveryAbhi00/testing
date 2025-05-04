@@ -3,12 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// ✅ Your actual GitHub repo name
-const repoName = "testing";
-
 export default defineConfig(({ mode }) => ({
-  // ✅ Dynamic base for dev vs. production
-  base: mode === "development" ? "/" : `/${repoName}/`,
+  base: mode === "development" ? "/" : "/testing/",
 
   server: {
     host: "::",
