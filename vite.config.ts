@@ -7,15 +7,19 @@ import { componentTagger } from "lovable-tagger";
 const repoName = "testing";
 
 export default defineConfig(({ mode }) => ({
-  base: `/${repoName}/`, // ✅ Required for GitHub Pages
+  // ✅ Dynamic base for dev vs. production
+  base: mode === "development" ? "/" : `/${repoName}/`,
+
   server: {
     host: "::",
     port: 8080,
   },
+
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
