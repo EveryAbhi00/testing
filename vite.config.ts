@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 const repoName = "testing";
 
 export default defineConfig(({ mode }) => ({
-  base: `/{repoName}/`, // ✅ Required for GitHub Pages
+  base: `/${repoName}/`, // ✅ Required for GitHub Pages
   server: {
     host: "::",
     port: 8080,
