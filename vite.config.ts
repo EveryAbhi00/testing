@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 const isProd = process.env.NODE_ENV === "production";
 
 export default defineConfig({
-  base: isProd ? "/testing/" : "/",
+  base: isProd ? "/" : "/",
   server: {
     host: "::",
     port: 8080,
