@@ -12,12 +12,10 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* Optional: Keep one Toaster if they serve the same role */}
       <Toaster />
       <Sonner />
-      <BrowserRouter > {/* Set the basename */}
+      <BrowserRouter basename="/testing">
         <Routes>
-          {/* ⚠️ Add new routes ABOVE the wildcard route */}
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
