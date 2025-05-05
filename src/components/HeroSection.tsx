@@ -89,15 +89,10 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll Down */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-          <a
-            href="#about"
-            className="flex flex-col items-center text-white/50 hover:text-white/80 transition-colors"
-          >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ArrowDown size={20} />
-          </a>
+        {/* Scroll Down - Hidden on screens smaller than 768px */}
+        <div className="block md:absolute md:bottom-10 md:left-1/2 md:transform md:-translate-x-1/2 md:animate-bounce md:z-10 md:flex md:flex-col md:items-center text-white/50 hover:text-white/80 transition-colors md:visible invisible">
+          <span className="text-sm mb-2">Scroll Down</span>
+          <ArrowDown size={20} />
         </div>
       </div>
     </section>
